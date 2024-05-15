@@ -26,8 +26,13 @@ public class Main {
 			 hsl.getappointment();
 			 break;
 		case 2:
-			
+			try{
 				hsl.getAppointmentsForPatient();
+			}
+				catch(PatientNumberNotFoundExeption e)
+				{
+					System.out.println(e.getMessage());
+				}
 			    break;
 		case 3:
 			hsl.getAppointmentsForDoctor();
